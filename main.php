@@ -34,9 +34,9 @@
 
 ###Have to adjust the directory to the proper one once completed
 ###For home testing
-#$dir = "/opt/redirect-files/maps";
+$dir = "/Users/hack/redirector/redirect-files/maps";
 ###For work testing on sysapp01
-$dir = "/var/www/html/redirector/redirect-files/maps";
+#$dir = "/var/www/html/redirector/redirect-files/maps";
 
 ###This works, returns an array of the textmap files
 
@@ -53,8 +53,8 @@ $files = array_filter(scandir($dir), function($item) { return !is_dir(($dir) . $
 <?php foreach($files as $textmap){ ?>
 
 <!--use php substr to get only the team names from the textmap files-->
-
-<?php $fuckyocouch = substr($textmap, 0, -10); ?>
+<!--This should be -8 to get teamname.com in the drop down menu, can be -12 to just have teamname without .com-->
+<?php $fuckyocouch = substr($textmap, 0, -8); ?>
 
                 <option value=<?php echo $fuckyocouch ?>><?php echo $fuckyocouch ?></option>
 

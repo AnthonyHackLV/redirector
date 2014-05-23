@@ -1,0 +1,6 @@
+#!/bin/bash
+
+### This script will perform the steps for a git push for the redirect files.
+### So we have to make sure we're in the directory, then do a git add *, 
+### git commit -am "<commit message>" and then git push origin master. 
+### The commit message will come from the php page.

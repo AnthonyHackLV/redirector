@@ -1,0 +1,5 @@
+#!/bin/bash
+
+### Simple bash script for a git pull, bash scripts seem to play better with php.
+### Will have to test if we're in the directory where the text maps reside and if not 
+### cd to it and git pull. If we're in it just git pull.
