@@ -4,3 +4,36 @@
 ### So we have to make sure we're in the directory, then do a git add *, 
 ### git commit -am "<commit message>" and then git push origin master. 
 ### The commit message will come from the php page.
+
+CURR_DIR=`pwd`
+TEXMAP_DIR=/Users/hack/redirector/redirect-files/maps
+
+### This comm_mesg is just for testing, in the final script the php will supply
+### the script with what needs to go to git.
+
+COMM_MESG=$1
+
+if [[ $# < 1 ]]; then
+	echo "Idiot, need a test message for git"
+elif [[ $# == 1 ]]; then
+	if [[ $CURR_DIR == $TEXMAP_DIR ]]; then
+		git add *
+		git commit -am "${COMM_MESG}"
+		git push origin master
+	else
+		#Add some logic here for testing cause dont want to actually add anything stupid
+		echo "Are you sure you want to commit this to Git?: {y|n}"
+		read answer
+		if [[ $answer == "y" || $answer == "Y" || $answer == "yes" ]]; then
+			cd $TEXMAP_DIR
+			git add *
+			git commit -am "${COMM_MESG}"
+			git push origin master
+		elif [[ $answer == "n" || $answer == "N" || $answer == "No" ]]; then
+			echo "Nothing to do then"
+			exit 0
+		fi
+		
+	fi
+fi
+
