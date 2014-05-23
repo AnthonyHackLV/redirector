@@ -3,3 +3,15 @@
 ### Simple bash script for a git pull, bash scripts seem to play better with php.
 ### Will have to test if we're in the directory where the text maps reside and if not 
 ### cd to it and git pull. If we're in it just git pull.
+
+### TEXMAP_DIR Will have to be updated to whatever/whereever the actual textmap files live no webadm01
+
+CURR_DIR=`pwd`
+TEXMAP_DIR=/Users/hack/redirector/redirect-files/maps
+
+if [[ $CURR_DIR == $TEXMAP_DIR ]]; then
+	git pull
+else
+	cd $TEXMAP_DIR
+	git pull
+fi
