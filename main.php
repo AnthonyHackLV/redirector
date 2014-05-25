@@ -4,11 +4,14 @@
 
 <title> MLB Redirecter Page </title>
 
+<?php
+print shell_exec('/Users/hack/redirector/git_scripts/gitpull');
+?>
+
 </head>
 
+
 <body>
-
-
 
 <div id="logo">
 
@@ -20,13 +23,9 @@
 
 </div>
 
-
-
 <br>
 
 <br>
-
-
 
 <div id="form">
 
@@ -71,6 +70,18 @@ $files = array_filter(scandir($dir), function($item) { return !is_dir(($dir) . $
 <option value="https://">https://</option>
 
 </select> </p> <input type="text" name="dest">
+
+<br>
+
+<br>
+
+<p> Git comment (for testing only)
+
+<br>
+
+<br>
+
+<input type="text" name="comment">
 
 <br>
 

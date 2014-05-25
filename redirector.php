@@ -12,6 +12,8 @@ $proto    = $_POST["proto"];
 
 $url      = $_POST["dest"];
 
+$comment  = $_POST["comment"];
+
 ### For testing at work on sysapp01
 #$dir = "/var/www/html/redirector/redirect-files/maps/";
 ### For testing at home on laptop dont forget to startup MAMP and go to localhost:8888/main.php
@@ -24,7 +26,8 @@ $redirect = $name ."\t". $proto.$url .PHP_EOL;
 
 if (file_exists($file)) {	
 	file_put_contents($file, $redirect, FILE_APPEND | LOCK_EX);
-	#echo "File has been written;
+	#See if this works to commit to git
+	print shell_exec('/Users/hack/redirector/git_scripts/gitpush' .$comment);
 } else {
         echo "The $file does not exist";
 }
