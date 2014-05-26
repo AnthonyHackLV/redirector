@@ -18,7 +18,7 @@ $comment  = $_POST["comment"];
 #$dir = "/var/www/html/redirector/redirect-files/maps/";
 ### For testing at home on laptop dont forget to startup MAMP and go to localhost:8888/main.php
 ### Apache doc root should be set to ~/redirector/redirect-files/maps/
-$dir = "/Users/hack/redirector/redirect-files/maps/";
+$dir = "/Users/hack/redirect-files/maps/";
 $file = $dir .$teamname. ".textmap";
 $redirect = $name ."\t". $proto.$url .PHP_EOL;
 

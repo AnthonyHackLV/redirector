@@ -33,7 +33,7 @@ print shell_exec('/Users/hack/redirector/git_scripts/gitpull');
 
 ###Have to adjust the directory to the proper one once completed
 ###For home testing
-$dir = "/Users/hack/redirector/redirect-files/maps";
+$dir = "/Users/hack/redirect-files/maps";
 ###For work testing on sysapp01
 #$dir = "/var/www/html/redirector/redirect-files/maps";
 

@@ -7,7 +7,7 @@
 ### TEXMAP_DIR Will have to be updated to whatever/whereever the actual textmap files live no webadm01
 
 CURR_DIR=`pwd`
-TEXMAP_DIR=/Users/hack/redirector/redirect-files/maps
+TEXMAP_DIR=/Users/hack/redirect-files/maps
 
 if [[ $CURR_DIR == $TEXMAP_DIR ]]; then
 	git pull

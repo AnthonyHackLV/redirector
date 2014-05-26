@@ -6,7 +6,7 @@
 ### The commit message will come from the php page.
 
 CURR_DIR=`pwd`
-TEXMAP_DIR=/Users/hack/redirector/redirect-files/maps
+TEXMAP_DIR=/Users/hack/redirect-files/maps
 
 ### This comm_mesg is just for testing, in the final script the php will supply
 ### the script with what needs to go to git.
