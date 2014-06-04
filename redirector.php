@@ -27,7 +27,7 @@ $redirect = $name ."\t". $proto.$url .PHP_EOL;
 if (file_exists($file)) {	
 	file_put_contents($file, $redirect, FILE_APPEND | LOCK_EX);
 	#See if this works to commit to git
-	print shell_exec('/Users/hack/redirector/git_scripts/gitpush' .$comment);
+	echo shell_exec("/Users/hack/redirector/git_scripts/gitpush $comment");
 } else {
         echo "The $file does not exist";
 }

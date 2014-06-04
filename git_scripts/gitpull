@@ -9,9 +9,10 @@
 CURR_DIR=`pwd`
 TEXMAP_DIR=/Users/hack/redirect-files/maps
 
+### Full path to git perhaps?
 if [[ $CURR_DIR == $TEXMAP_DIR ]]; then
-	git pull
+	echo `/usr/bin/git pull 2>&1`
 else
 	cd $TEXMAP_DIR
-	git pull
+	echo `/usr/bin/git pull 2>&1`
 fi

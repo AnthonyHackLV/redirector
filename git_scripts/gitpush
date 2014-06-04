@@ -14,25 +14,26 @@ TEXMAP_DIR=/Users/hack/redirect-files/maps
 COMM_MESG=$1
 
 if [[ $# < 1 ]]; then
-	echo "Idiot, need a test message for git"
+	echo "Need a test message for git"
 elif [[ $# == 1 ]]; then
 	if [[ $CURR_DIR == $TEXMAP_DIR ]]; then
-		git add *
-		git commit -am "${COMM_MESG}"
-		git push origin master
+		echo `/usr/bin/git add * 2>&1`
+		echo `/usr/bin/git commit -am "${COMM_MESG}" 2>&1`
+		echo `/usr/bin/git push origin master 2>&1`
 	else
 		#Add some logic here for testing cause dont want to actually add anything stupid
-		echo "Are you sure you want to commit this to Git?: {y|n}"
-		read answer
-		if [[ $answer == "y" || $answer == "Y" || $answer == "yes" ]]; then
+		#echo "Are you sure you want to commit this to Git?: {y|n}"
+		#read answer
+		#if [[ $answer == "y" || $answer == "Y" || $answer == "yes" ]]; then
+			echo "CD'ing into correct directory"
 			cd $TEXMAP_DIR
-			git add *
-			git commit -am "${COMM_MESG}"
-			git push origin master
-		elif [[ $answer == "n" || $answer == "N" || $answer == "No" ]]; then
-			echo "Nothing to do then"
-			exit 0
-		fi
+			echo `/usr/bin/git add * 2>&1`
+			echo `/usr/bin/git commit -am "${COMM_MESG}" 2>&1`
+			echo `/usr/bin/git push origin master 2>&1`
+		#elif [[ $answer == "n" || $answer == "N" || $answer == "No" ]]; then
+		#	echo "Nothing to do then"
+		#	exit 0
+		#fi
 		
 	fi
 fi
